@@ -8,7 +8,6 @@
     box-sizing: border-box;
 }
 
-
 body > header {
     background-color: #333;
     height: 4.5rem;
@@ -34,7 +33,6 @@ body > header > #header-content > .nav-menu {
     gap: 2.7rem;
 }
 
-
 body > header > #header-content > .nav-menu > .menu-button {
     background-color: transparent;
     border: none;
@@ -48,7 +46,7 @@ body > header > #header-content > .nav-menu > .menu-button:hover {
     color: #ccc;
 }
 
-
+/* 이미지 섹션 스타일 */
 body > .image-section {
     position: relative;
     display: flex;
@@ -98,4 +96,112 @@ body > .image-section > .overlay > h1 {
 body > .image-section > .overlay > h2 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
+}
+
+/* 그리드 형식의 info-archive 섹션 */
+body > main > .info-archive-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 두 개의 동일한 크기 칸 */
+    gap: 2rem; /* 두 박스 사이 간격 */
+    padding: 3rem 6rem;
+}
+
+body > main > .info-archive-section .box {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* h3 제목 스타일 */
+body > main > .info-archive-section > .box.info-box h3,
+body > main > .info-archive-section > .box.archive-box h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center; /* 제목 중앙 정렬 */
+    color: #333;
+}
+
+/* 아카이브 박스 안의 .box-wrapper */
+body > main > .info-archive-section > .box.archive-box > .box-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 두 개의 동일한 크기 칸 */
+    gap: 2rem; /* 두 박스 사이 간격 */
+    align-items: stretch;
+    text-align: center;
+    padding-top: 6rem;
+}
+
+/* a 태그 블록 요소로 변환 */
+body > main > .info-archive-section > .box.archive-box > .box-wrapper > a {
+    display: block;
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+/* content-wrapper에 Flexbox 적용해 이미지와 텍스트 중앙 정렬 */
+body > main > .info-archive-section > .box.archive-box > .box-wrapper > a .content-wrapper {
+    display: flex;
+    flex-direction: column; /* 이미지와 텍스트를 위아래로 배치 */
+    justify-content: center; /* 수직 중앙 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    height: 100%; /* wrapper가 전체 높이 차지 */
+}
+
+/* 이미지 스타일 */
+body > main > .info-archive-section > .box.archive-box > .box-wrapper > a .content-wrapper > img {
+    width: 14rem;
+    height: auto;
+    margin-bottom: 1rem; /* 이미지와 텍스트 간격 */
+}
+
+/* 텍스트 스타일 */
+body > main > .info-archive-section > .box.archive-box > .box-wrapper > a .content-wrapper > .text {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 내 정보 섹션 */
+body > main > .info-archive-section > .box.info-box > ul {
+    list-style-type: none; /* 기본 리스트 스타일 제거 */
+    padding: 0;
+    margin: 0;
+}
+
+body > main > .info-archive-section > .box.info-box > ul > li {
+    padding: 1rem 0; /* 각 항목 간 여백 */
+    border-bottom: 1px solid #e0e0e0; /* 항목 간 구분선 */
+}
+
+body > main > .info-archive-section > .box.info-box > ul > li:last-child {
+    border-bottom: none; /* 마지막 항목은 구분선 제거 */
+}
+
+/* bold 텍스트는 위쪽 */
+body > main > .info-archive-section > .box.info-box > ul > li .bold {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.9rem; /* bold와 info 간 간격 */
+    padding-left: 1rem;
+}
+
+/* info 텍스트는 아래쪽 */
+body > main > .info-archive-section > .box.info-box > ul > li .text-info {
+    display: block;
+    font-size: 1rem;
+    color: #666;
+    padding-left: 1rem;
+}
+
+/* 박스 스타일 */
+body > main > .info-archive-section > .box.info-box {
+    padding: 2rem;
+    background-color: #f0f0f0; /* 박스 배경색 */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
 }
