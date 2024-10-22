@@ -7,6 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+main {
+    background-color: #d3d3d3;
+}
 
 body > header {
     background-color: #333;
@@ -173,7 +176,7 @@ body > main > .info-archive-section > .box.info-box > ul {
 
 body > main > .info-archive-section > .box.info-box > ul > li {
     padding: 1rem 0; /* 각 항목 간 여백 */
-    border-bottom: 1px solid #e0e0e0; /* 항목 간 구분선 */
+    border-bottom: 3px solid #e0e0e0; /* 항목 간 구분선 */
 }
 
 body > main > .info-archive-section > .box.info-box > ul > li:last-child {
