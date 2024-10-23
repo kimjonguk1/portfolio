@@ -105,6 +105,7 @@ body > .image-section > .overlay > h2 {
 body > main > .info-archive-section {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 두 개의 동일한 크기 칸 */
+    grid-column: 2 / span 2;
     gap: 2rem; /* 두 박스 사이 간격 */
     padding: 3rem 6rem;
 }
@@ -207,4 +208,8 @@ body > main > .info-archive-section > .box.info-box {
     background-color: #f0f0f0; /* 박스 배경색 */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+}
+
+body > main > .stack-section > .stack-wrapper {
+
 }
