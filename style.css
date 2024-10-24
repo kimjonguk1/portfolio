@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 main {
     background-color: #d3d3d3;
 }
@@ -105,9 +106,11 @@ body > .image-section > .overlay > h2 {
 body > main > .info-archive-section {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 두 개의 동일한 크기 칸 */
-    grid-column: 2 / span 2;
-    gap: 2rem; /* 두 박스 사이 간격 */
+    grid-template-rows: auto auto;
+    gap: 4rem; /* 두 박스 사이 간격 */
     padding: 3rem 6rem;
+    max-width: 80%; /* 전체 그리드의 최대 너비를 80%로 줄임 */
+    margin: 0 auto; /* 중앙 정렬 */
 }
 
 body > main > .info-archive-section .box {
@@ -210,6 +213,147 @@ body > main > .info-archive-section > .box.info-box {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
 }
 
-body > main > .stack-section > .stack-wrapper {
+/* stack-box 스타일 */
+body > main > .info-archive-section > .box.stack-box {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    grid-column: span 2;
 
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* front-stack 내부 요소들을 가로 정렬 */
+body > main > .info-archive-section > .box.stack-box > .stack {
+    gap: 4rem; /* 두 섹션 간 간격 */
+}
+
+body > main > .info-archive-section > .box.stack-box > .stack > .stack-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* 텍스트와 이미지를 수평 중앙에 정렬 */
+    text-align: center;
+}
+
+body > main > .info-archive-section > .box.stack-box > .stack > .stack-image img {
+    width: 6rem; /* 너비를 자동으로 설정 */
+    height: 6rem; /* 높이는 고정 */
+    max-width: 100%; /* 최대 너비는 부모 요소의 100% */
+    margin: 1rem; /* 이미지 간격 */
+    border-radius: 10px; /* 둥근 모서리 */
+    border: 1px solid #ccc; /* 경계선 추가 */
+    object-fit: contain; /* 이미지 비율을 유지하면서 잘리지 않도록 함 */
+}
+
+/* 제목 스타일링 (Frontend, Backend) */
+body > main > .info-archive-section > .box.stack-box > .stack > .stack-image > .stack-bold {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+/* 케러셀 부분 시작 */
+
+.carousel-wrapper {
+    position: relative;
+    width: 83rem;
+    max-width: 100%; /* 그리드 크기와 일치 */
+    height: 30rem; /* 위의 그리드와 동일한 높이 */
+    overflow: hidden; /* 슬라이드 외부 이미지를 숨김 */
+    /*background-color: #d3d3d3;*/
+    background-color: white;
+    /*margin-top: 2rem; !* 그리드와 간격 *!*/
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center; /* 캐러셀을 화면 중앙 정렬 */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+}
+
+/* 캐러셀 내부 요소들을 가로로 배치 */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* 슬라이드 전환 애니메이션 */
+    width: 300%; /* 아이템 개수에 맞게 전체 너비 설정 (5개면 500%) */
+}
+
+/* 각 캐러셀 아이템이 한 번에 하나씩 보이도록 설정 */
+.carousel_item {
+    min-width: 100%; /* 한 번에 하나의 아이템만 보임 */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* 수직 중앙 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    text-align: center;
+    padding: 1rem;
+}
+
+.carousel_item img {
+    width: 40%; /* 이미지 너비는 80%로 설정 */
+    height: auto; /* 이미지 높이는 60% */
+    object-fit: contain; /* 비율을 유지하며 이미지 맞추기 */
+    margin-right: 8rem;
+    margin-top: 1rem;
+}
+
+.carousel_text-content {
+    width: 60%; /* 텍스트가 오른쪽 60% 차지 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 텍스트 수직 중앙 정렬 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+}
+
+.carousel-bold {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-text {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-stack {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%; /* 버튼을 수직 중앙에 맞춤 */
+    transform: translateY(-50%); /* 정확한 수직 중앙 정렬 */
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 검정색 */
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 2; /* 이미지 위에 보이도록 */
+}
+
+.prev {
+    left: 6rem; /* 왼쪽에 배치 */
+}
+
+.next {
+    right: 6rem; /* 오른쪽에 배치 */
+}
+
+/* 캐러셀 끝 */
+
+body > footer {
+    background-color: #333;
+    height: 4.5rem;
+    width: 100%;
 }
