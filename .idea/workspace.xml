@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b03b55d4-c577-474d-92c6-e6cd775032a2" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="b03b55d4-c577-474d-92c6-e6cd775032a2" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +50,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Documents\GitHub\portfolio\img\stack-img" />
       <recent name="C:\Users\user\Documents\GitHub\portfolio\img" />
       <recent name="C:\Users\user\Documents\GitHub\portfolio" />
     </key>
@@ -80,6 +78,7 @@
       <workItem from="1729563335693" duration="12916000" />
       <workItem from="1729642033239" duration="599000" />
       <workItem from="1729672208407" duration="734000" />
+      <workItem from="1729729647100" duration="13072000" />
     </task>
     <servers />
   </component>
