@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-main {
+body {
     background-color: #d3d3d3;
 }
 
@@ -269,7 +269,7 @@ body > main > .info-archive-section > .box.stack-box > .stack > .stack-image > .
     /*background-color: #d3d3d3;*/
     background-color: white;
     /*margin-top: 2rem; !* 그리드와 간격 *!*/
-    margin: 1rem auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center; /* 캐러셀을 화면 중앙 정렬 */
     border-radius: 10px;
@@ -299,8 +299,7 @@ body > main > .info-archive-section > .box.stack-box > .stack > .stack-image > .
     width: 40%; /* 이미지 너비는 80%로 설정 */
     height: auto; /* 이미지 높이는 60% */
     object-fit: contain; /* 비율을 유지하며 이미지 맞추기 */
-    margin-right: 8rem;
-    margin-top: 1rem;
+    margin-right: 9rem;
 }
 
 .carousel_text-content {
@@ -343,17 +342,28 @@ body > main > .info-archive-section > .box.stack-box > .stack > .stack-image > .
 }
 
 .prev {
-    left: 6rem; /* 왼쪽에 배치 */
+    left: 4rem; /* 왼쪽에 배치 */
 }
 
 .next {
-    right: 6rem; /* 오른쪽에 배치 */
+    right: 4rem; /* 오른쪽에 배치 */
 }
 
 /* 캐러셀 끝 */
 
 body > footer {
+    margin-top: 4rem;
     background-color: #333;
     height: 4.5rem;
     width: 100%;
+    display: flex;
+}
+
+body > footer > #footer-content > span {
+    color: white;
+    /*line-height: 4.5rem;*/
+    /*text-align: center;*/
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: inline-block;
 }
