@@ -1,11 +1,16 @@
 @CHARSET "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     font-family: "Nanum Gothic", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration-line: none;
 }
 
 body {
@@ -50,7 +55,6 @@ body > header > #header-content > .nav-menu > .menu-button:hover {
     color: #ccc;
 }
 
-/* 이미지 섹션 스타일 */
 body > .image-section {
     position: relative;
     display: flex;
@@ -102,15 +106,14 @@ body > .image-section > .overlay > h2 {
     margin-bottom: 1.5rem;
 }
 
-/* 그리드 형식의 info-archive 섹션 */
 body > main > .info-archive-section {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 두 개의 동일한 크기 칸 */
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    gap: 4rem; /* 두 박스 사이 간격 */
+    gap: 4rem;
     padding: 3rem 6rem;
-    max-width: 80%; /* 전체 그리드의 최대 너비를 80%로 줄임 */
-    margin: 0 auto; /* 중앙 정렬 */
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 body > main > .info-archive-section .box {
@@ -121,49 +124,45 @@ body > main > .info-archive-section .box {
     position: relative;
 }
 
-/* h3 제목 스타일 */
 body > main > .info-archive-section > .box.info-box h3,
-body > main > .info-archive-section > .box.archive-box h3 {
+body > main > .info-archive-section > .box.archive-box h3,
+body > main > .info-archive-section > .box.stack-box h3{
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 1.5rem;
-    text-align: center; /* 제목 중앙 정렬 */
+    margin: 1.5rem 0;
+    text-align: center;
     color: #333;
+    white-space: nowrap;
 }
 
-/* 아카이브 박스 안의 .box-wrapper */
 body > main > .info-archive-section > .box.archive-box > .box-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 두 개의 동일한 크기 칸 */
-    gap: 2rem; /* 두 박스 사이 간격 */
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     align-items: stretch;
     text-align: center;
     padding-top: 6rem;
 }
 
-/* a 태그 블록 요소로 변환 */
 body > main > .info-archive-section > .box.archive-box > .box-wrapper > a {
     display: block;
-    text-decoration: none; /* 밑줄 제거 */
+    text-decoration: none;
 }
 
-/* content-wrapper에 Flexbox 적용해 이미지와 텍스트 중앙 정렬 */
 body > main > .info-archive-section > .box.archive-box > .box-wrapper > a .content-wrapper {
     display: flex;
-    flex-direction: column; /* 이미지와 텍스트를 위아래로 배치 */
-    justify-content: center; /* 수직 중앙 정렬 */
-    align-items: center; /* 수평 중앙 정렬 */
-    height: 100%; /* wrapper가 전체 높이 차지 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-/* 이미지 스타일 */
 body > main > .info-archive-section > .box.archive-box > .box-wrapper > a .content-wrapper > img {
     width: 14rem;
     height: auto;
-    margin-bottom: 1rem; /* 이미지와 텍스트 간격 */
+    margin-bottom: 1rem;
 }
 
-/* 텍스트 스타일 */
 body > main > .info-archive-section > .box.archive-box > .box-wrapper > a .content-wrapper > .text {
     font-size: 1rem;
     color: #333;
@@ -171,33 +170,30 @@ body > main > .info-archive-section > .box.archive-box > .box-wrapper > a .conte
     text-align: center;
 }
 
-/* 내 정보 섹션 */
 body > main > .info-archive-section > .box.info-box > ul {
-    list-style-type: none; /* 기본 리스트 스타일 제거 */
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
 body > main > .info-archive-section > .box.info-box > ul > li {
-    padding: 1rem 0; /* 각 항목 간 여백 */
-    border-bottom: 3px solid #e0e0e0; /* 항목 간 구분선 */
+    padding: 1rem 0;
+    border-bottom: 3px solid #e0e0e0;
 }
 
 body > main > .info-archive-section > .box.info-box > ul > li:last-child {
-    border-bottom: none; /* 마지막 항목은 구분선 제거 */
+    border-bottom: none;
 }
 
-/* bold 텍스트는 위쪽 */
 body > main > .info-archive-section > .box.info-box > ul > li .bold {
     display: block;
     font-weight: bold;
     font-size: 1.1rem;
     color: #333;
-    margin-bottom: 0.9rem; /* bold와 info 간 간격 */
+    margin-bottom: 0.9rem;
     padding-left: 1rem;
 }
 
-/* info 텍스트는 아래쪽 */
 body > main > .info-archive-section > .box.info-box > ul > li .text-info {
     display: block;
     font-size: 1rem;
@@ -205,52 +201,48 @@ body > main > .info-archive-section > .box.info-box > ul > li .text-info {
     padding-left: 1rem;
 }
 
-/* 박스 스타일 */
 body > main > .info-archive-section > .box.info-box {
     padding: 2rem;
-    background-color: #f0f0f0; /* 박스 배경색 */
+    background-color: #f0f0f0;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* stack-box 스타일 */
 body > main > .info-archive-section > .box.stack-box {
     padding: 2rem;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     grid-column: span 2;
-
+    margin-bottom: 6rem;
     display: flex;
-    justify-content: center; /* 수평 중앙 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 2rem;
 }
 
-/* front-stack 내부 요소들을 가로 정렬 */
 body > main > .info-archive-section > .box.stack-box > .stack {
-    gap: 4rem; /* 두 섹션 간 간격 */
+    gap: 4rem;
 }
 
 body > main > .info-archive-section > .box.stack-box > .stack > .stack-image {
     display: flex;
     flex-direction: row;
-    align-items: center; /* 텍스트와 이미지를 수평 중앙에 정렬 */
+    align-items: center;
     text-align: center;
 }
 
 body > main > .info-archive-section > .box.stack-box > .stack > .stack-image img {
-    width: 6rem; /* 너비를 자동으로 설정 */
-    height: 6rem; /* 높이는 고정 */
-    max-width: 100%; /* 최대 너비는 부모 요소의 100% */
-    margin: 1rem; /* 이미지 간격 */
-    border-radius: 10px; /* 둥근 모서리 */
-    border: 1px solid #ccc; /* 경계선 추가 */
-    object-fit: contain; /* 이미지 비율을 유지하면서 잘리지 않도록 함 */
+    width: 6rem;
+    height: 6rem;
+    max-width: 100%;
+    margin: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    object-fit: contain;
 }
 
-/* 제목 스타일링 (Frontend, Backend) */
 body > main > .info-archive-section > .box.stack-box > .stack > .stack-image > .stack-bold {
     font-weight: bold;
     margin-bottom: 1rem;
@@ -258,61 +250,50 @@ body > main > .info-archive-section > .box.stack-box > .stack > .stack-image > .
     margin-right: 1rem;
 }
 
-/* 케러셀 부분 시작 */
-
 .carousel-wrapper {
     position: relative;
     width: 83rem;
-    max-width: 100%; /* 그리드 크기와 일치 */
-    height: 30rem; /* 위의 그리드와 동일한 높이 */
-    overflow: hidden; /* 슬라이드 외부 이미지를 숨김 */
-    /*background-color: #d3d3d3;*/
+    max-width: 100%;
+    height: 30rem;
+    overflow: hidden;
     background-color: white;
-    /*margin-top: 2rem; !* 그리드와 간격 *!*/
     margin: 0 auto;
     display: flex;
-    justify-content: center; /* 캐러셀을 화면 중앙 정렬 */
+    justify-content: center;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 캐러셀 내부 요소들을 가로로 배치 */
 .carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* 슬라이드 전환 애니메이션 */
-    width: 300%; /* 아이템 개수에 맞게 전체 너비 설정 (5개면 500%) */
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
 }
 
-/* 각 캐러셀 아이템이 한 번에 하나씩 보이도록 설정 */
 .carousel_item {
-    min-width: 100%; /* 한 번에 하나의 아이템만 보임 */
+    min-width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    justify-content: center; /* 수직 중앙 정렬 */
-    align-items: center; /* 수평 중앙 정렬 */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 1rem;
 }
 
 .carousel_item img {
-    width: 50%; /* 이미지 너비는 80%로 설정 */
-    height: auto; /* 이미지 높이는 60% */
-    object-fit: contain; /* 비율을 유지하며 이미지 맞추기 */
+    width: 50%;
+    height: auto;
+    object-fit: contain;
     margin-right: 3rem;
 }
 
 .carousel_text-content {
-    width: 50%; /* 텍스트가 오른쪽 60% 차지 */
-    padding: 1rem; /* 텍스트 주변 여백 */
-    margin: 0 auto; /* 텍스트를 중앙에 배치 */
-    text-align: left; /* 텍스트 왼쪽 정렬 (필요시 중앙 정렬로 변경 가능) */
-    word-wrap: break-word; /* 단어가 너무 길 때 자동으로 줄 바꿈 */
-
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center; !* 텍스트 수직 중앙 정렬 *!*/
-    /*text-align: left; !* 텍스트 왼쪽 정렬 *!*/
+    width: 50%;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: left;
+    word-wrap: break-word;
 }
 
 .carousel-bold {
@@ -338,21 +319,21 @@ body > main > .info-archive-section > .box.stack-box > .stack > .stack-image > .
 .next {
     position: absolute;
     bottom: 1rem;
-    transform: translateY(-50%); /* 정확한 수직 중앙 정렬 */
-    background-color: rgba(0, 0, 0, 0.5); /* 반투명 검정색 */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 1rem;
     cursor: pointer;
-    z-index: 2; /* 이미지 위에 보이도록 */
+    z-index: 2;
 }
 
 .prev {
-    left: 2rem; /* 왼쪽에 배치 */
+    left: 2rem;
 }
 
 .next {
-    right: 2rem; /* 오른쪽에 배치 */
+    right: 2rem;
 }
 
 .project-link {
@@ -365,16 +346,14 @@ body > main > .info-archive-section > .box.stack-box > .stack > .stack-image > .
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.9rem;
-    text-align: center; /* 텍스트를 중앙 정렬 */
+    text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .project-link:hover {
-    background-color: #333; /* 어울리는 어두운 색상 */
+    background-color: #333;
     color: white;
 }
-
-/* 캐러셀 끝 */
 
 body > footer {
     margin-top: 4rem;
@@ -382,8 +361,8 @@ body > footer {
     height: 4.5rem;
     width: 100%;
     display: flex;
-    justify-content: center; /* 수평 중앙 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center;
+    align-items: center;
 }
 
 body > footer > #footer-content > span {
