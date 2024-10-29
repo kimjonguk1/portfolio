@@ -11,9 +11,9 @@
     <div class="welcome-message">Welcome to my portfolio!</div>
     <div id="header-content">
         <nav class="nav-menu">
-            <button class="menu-button" type="button">자기소개</button>
-            <button class="menu-button" type="button">기술</button>
-            <button class="menu-button" type="button">프로젝트</button>
+            <a href="#introduction" class="menu-button">자기소개</a>
+            <a href="#skills" class="menu-button">기술</a>
+            <a href="#projects" class="menu-button">프로젝트</a>
         </nav>
     </div>
 </header>
@@ -27,6 +27,7 @@
 </section>
 
 <main>
+    <div id="introduction"></div>
     <section class="info-archive-section">
         <div class="box info-box">
             <h3>내 정보</h3>
@@ -72,7 +73,10 @@
                 </a>
             </div>
         </div>
-        <div class="box stack-box">
+
+        <div id="skills"></div>
+        <div class="box stack-box" >
+            <h3>기술 스택</h3>
             <div class="stack">
                 <div class="stack-image">
                     <span class="stack-bold">Frontend</span>
@@ -90,24 +94,25 @@
             </div>
         </div>
     </section>
+    <div id="projects"></div>
     <div class="carousel-wrapper">
         <div class="carousel">
             <div class="carousel_item">
-                <img src="https://cdn2.thecatapi.com/images/FCNqMC83P.jpg"/>
+                <img src="./img/project-img/project-1.jpg.png"/>
                 <div class="text-container">
-                    <span class="carousel-bold">무슨 프로젝트</span>
-                    <span class="carousel-text">어떠어떠한 프로젝트를 진행</span>
-                    <span class="carousel-stack">Html, Css, JS</span>
+                    <span class="carousel-bold">장애인을 위한 검색 서비스</span>
+                    <span class="carousel-text">키보드를 사용하지 않는 원 버튼 아키네이터이며,<br> 손이 불편하거나 타자가 익숙치 않은 연령층을 위한 검색 사이트입니다.</span>
+                    <span class="carousel-stack">React, Node.js, Google Cloud Function</span>
+                    <a href="https://github.com/JunDeve/Disabilities-Search-Service" target="_blank" class="project-link">github 링크</a>
                 </div>
-
             </div>
-
             <div class="carousel_item">
-                <img src="https://cdn2.thecatapi.com/images/FCNqMC83P.jpg"/>
+                <img src="./img/project-img/project-2.png"/>
                 <div class="text-container">
-                    <span class="carousel-bold">무슨 프로젝트</span>
-                    <span class="carousel-text">어떠어떠한 프로젝트를 진행</span>
+                    <span class="carousel-bold">날씨 정보 검색 사이트</span>
+                    <span class="carousel-text">사용자가 원하는 지역의 날씨 정보를 불러올 수 있는 사이트입니다. <br>OpenWeather API를 사용하였으며,<br> 현재 날씨에 어울리는 배경 영상을 추가했습니다. </span>
                     <span class="carousel-stack">Html, Css, JS</span>
+                    <a href="https://github.com/kimjonguk1/weather_information" target="_blank" class="project-link">github 링크</a>
                 </div>
             </div>
 
